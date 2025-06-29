@@ -1,0 +1,7 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/nav_pantry" android:icon="@drawable/food_bank_24px" android:title="Pantry"/>
+    <item android:id="@+id/nav_recipes" android:icon="@drawable/skillet_24px" android:title="Recipes"/>
+    <item android:id="@+id/nav_scan" android:icon="@drawable/barcode_scanner_24px" android:title=""/>
+    <item android:id="@+id/nav_chatbot" android:icon="@drawable/chat_24px" android:title="Chatbot"/>
+    <item android:id="@+id/nav_account" android:icon="@drawable/account_circle_24px" android:title="Home"/>
+</menu>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.kenttravis.pantrypal.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <action android:id="@+id/action_global_homeFragment" app:destination="@id/homeFragment" />
+    <fragment
+        android:id="@+id/productDetailFragment"
+        android:name="com.kenttravis.pantrypal.ui.home.ProductDetailFragment"
+        android:label="ProductDetailFragment" />
+    <action android:id="@+id/action_global_productDetailFragment" app:destination="@id/productDetailFragment" />
+    <fragment
+        android:id="@+id/recipesFragment"
+        android:name="com.kenttravis.pantrypal.ui.recipes.RecipesFragment"
+        android:label="RecipesFragment">
+        <action
+            android:id="@+id/action_recipesFragment_to_filterResultFragment"
+            app:destination="@id/filterResultFragment" />
+    </fragment>
+    <action android:id="@+id/action_global_recipesFragment" app:destination="@id/recipesFragment" />
+    <fragment
+        android:id="@+id/filterResultFragment"
+        android:name="com.kenttravis.pantrypal.ui.recipes.FilterResultFragment"
+        android:label="fragment_filter_result"
+        tools:layout="@layout/fragment_filter_result" >
+        <argument
+            android:name="id"
+            app:argType="string" />
+        <argument
+            android:name="type"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_filterResultFragment_to_recipeDetailFragment"
+            app:destination="@id/recipeDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/areasFragment"
+        android:name="com.kenttravis.pantrypal.ui.recipes.AreasFragment"
+        android:label="AreasFragment" >
+        <action
+            android:id="@+id/action_areasFragment_to_filterResultFragment"
+            app:destination="@id/filterResultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoriesFragment"
+        android:name="com.kenttravis.pantrypal.ui.recipes.CategoriesFragment"
+        android:label="CategoriesFragment" >
+        <action
+            android:id="@+id/action_categoriesFragment_to_filterResultFragment"
+            app:destination="@id/filterResultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ingredientsFragment"
+        android:name="com.kenttravis.pantrypal.ui.recipes.IngredientsFragment"
+        android:label="IngredientsFragment" >
+        <action
+            android:id="@+id/action_ingredientsFragment_to_filterResultFragment"
+            app:destination="@id/filterResultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recipeDetailFragment"
+        android:name="com.kenttravis.pantrypal.ui.recipes.RecipeDetailFragment"
+        android:label="RecipeDetailFragment" >
+        <argument
+            android:name="id"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatListFragment"
+        android:name="com.kenttravis.pantrypal.ui.chatbot.ChatListFragment"
+        android:label="ChatListFragment" >
+        <action
+            android:id="@+id/action_chatListFragment_to_chatDetailFragment"
+            app:destination="@id/chatDetailFragment" />
+    </fragment>
+    <action android:id="@+id/action_global_chatListFragment" app:destination="@id/chatListFragment" />
+    <fragment
+        android:id="@+id/chatDetailFragment"
+        android:name="com.kenttravis.pantrypal.ui.chatbot.ChatDetailFragment"
+        android:label="ChatDetailFragment" >
+        <argument
+            android:name="id"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/userProfileFragment"
+        android:name="com.example.userprofile.UserProfileFragment"
+        android:label="UserProfileFragment" /><action android:id="@+id/action_global_userProfileFragment" app:destination="@id/userProfileFragment"/>
+</navigation>
